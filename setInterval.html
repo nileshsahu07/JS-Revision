@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nilesh Pancholi</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setInterval(()=>{
+    //     console.log("I am Nilesh Pancholi")
+    // },2000)
+
+
+    // const sayNilesh = function(myName){
+    //     console.log(myName)
+    // }
+
+    // setInterval(sayNilesh,2000,"Nilesh")
+
+    const sayNilesh = function(){
+        console.log("My name is Nilesh Pancholi")
+    }
+
+    let stopFun;
+    document.querySelector("#start").addEventListener('click',()=>{
+       stopFun =  setInterval(sayNilesh,2000)
+       console.log("Start")
+    })
+
+    document.querySelector("#stop").addEventListener('click',()=>{
+        clearInterval(stopFun);
+        console.log("Stopped")
+    })
+
+
+
+</script>
+</html>
